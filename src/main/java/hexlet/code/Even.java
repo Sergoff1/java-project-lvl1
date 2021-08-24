@@ -8,8 +8,11 @@ class Even {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
 
         Scanner sc = new Scanner(System.in);
-        for (byte i = 0; i < 3; i++) {
-            int number = (int)(Math.random() * 100);
+        final int numberOfQuestions = 3;
+        final int maxNumberInGame = 100;
+
+        for (byte i = 0; i < numberOfQuestions; i++) {
+            int number = (int) (Math.random() * maxNumberInGame);
             System.out.println("Question: " + number);
 
             System.out.print("Your answer: ");
@@ -18,7 +21,8 @@ class Even {
             if (getCorrectAnswer(number).equals(answer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + getCorrectAnswer(number) + "'.");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                        + getCorrectAnswer(number) + "'.");
                 System.out.println("Let's try again, " + playerName + "!");
                 return;
             }
