@@ -5,3 +5,6 @@
 
 ### Пример игры Even
 [![asciicast](https://asciinema.org/a/QzIhjQtiXSABccPLunf8pafe2.svg)](https://asciinema.org/a/QzIhjQtiXSABccPLunf8pafe2)
+
+### Пример игры Calc
+[![asciicast](https://asciinema.org/a/0QNXurW9e0dyhyAwKQX7T5Jis.svg)](https://asciinema.org/a/0QNXurW9e0dyhyAwKQX7T5Jis)
