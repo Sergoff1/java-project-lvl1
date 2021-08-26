@@ -32,7 +32,7 @@
 -->
 
 <module name="Checker">
-    <!--
+        <!--
         If you set the basedir property below, then all reported file
         names will be relative to the specified directory. See
         https://checkstyle.org/5.x/config.html#Checker
@@ -97,6 +97,12 @@
     <!-- </module> -->
 
     <module name="TreeWalker">
+
+        <module name="SuppressWithNearbyCommentFilter">
+            <property name="commentFormat" value="CHECKSTYLE IGNORE (\w+) FOR NEXT (\d+) LINES"/>
+            <property name="checkFormat" value="$1"/>
+            <property name="influenceFormat" value="$2"/>
+        </module>
 
         <!-- Checks for Javadoc comments.                     -->
         <!-- See https://checkstyle.org/config_javadoc.html -->
