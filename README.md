@@ -8,3 +8,6 @@
 
 ### Пример игры Calc
 [![asciicast](https://asciinema.org/a/0QNXurW9e0dyhyAwKQX7T5Jis.svg)](https://asciinema.org/a/0QNXurW9e0dyhyAwKQX7T5Jis)
+
+### Пример игры GCD
+[![asciicast](https://asciinema.org/a/UYKMOtducRluV3UsG3QojXLxO.svg)](https://asciinema.org/a/UYKMOtducRluV3UsG3QojXLxO)
