@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
-
 public class Even extends Game {
 
     @Override
@@ -11,7 +9,6 @@ public class Even extends Game {
 
     @Override
     public final String getQuestion() {
-        Scanner sc = new Scanner(System.in);
         final int maxNumberInGame = 100;
         int number = (int) (Math.random() * maxNumberInGame);
         return Integer.toString(number);
