@@ -26,7 +26,7 @@ public class Progression {
             question[i] = Integer.toString(currentNumber);
         }
 
-        int indexOfHiddenElement = (int) (Math.random() * (length + 1));
+        int indexOfHiddenElement = (int) (Math.random() * length);
 
         question[indexOfHiddenElement] = "..";
 
