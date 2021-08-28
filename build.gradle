@@ -16,7 +16,7 @@ application {
 }
 
 compileJava {
-    options.release = 16
+    options.release = 15
 }
 
 run {
