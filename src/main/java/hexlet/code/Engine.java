@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -9,6 +13,11 @@ public class Engine {
 
     static void start(String game) {
         String playerName = Cli.greet();
+
+        if (game.equals("Greet")) {
+            return;
+        }
+
         switch (game) {
             case "Even":
                 System.out.println(Even.getDescription());

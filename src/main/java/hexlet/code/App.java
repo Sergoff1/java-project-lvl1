@@ -14,17 +14,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.print("Your choice: ");
         int selectedGame = sc.nextInt();
-        System.out.println();
 
-        switch (selectedGame) {
-            case 1 -> Cli.greet();
-            case 2 -> Engine.start("Even");
-            case 3 -> Engine.start("Calc");
-            case 4 -> Engine.start("GCD");
-            case 5 -> Engine.start("Progression");
-            case 6 -> Engine.start("Prime");
-            default -> System.exit(0);
-        }
-
+        Engine.start(gamesNumbers[selectedGame]);
     }
 }
