@@ -1,8 +1,5 @@
 package hexlet.code;
 
-// CHECKSTYLE IGNORE check FOR NEXT 1 LINES
-import hexlet.code.games.*;
-
 import java.util.Scanner;
 
 public class App {
@@ -18,21 +15,16 @@ public class App {
         System.out.print("Your choice: ");
         int selectedGame = sc.nextInt();
         System.out.println();
-        Game game = null;
 
-        // CHECKSTYLE IGNORE check FOR NEXT 8 LINES
         switch (selectedGame) {
             case 1 -> Cli.greet();
-            case 2 -> game = new Even();
-            case 3 -> game = new Calc();
-            case 4 -> game = new GCD();
-            case 5 -> game = new Progression();
-            case 6 -> game = new Prime();
+            case 2 -> Engine.start("Even");
+            case 3 -> Engine.start("Calc");
+            case 4 -> Engine.start("GCD");
+            case 5 -> Engine.start("Progression");
+            case 6 -> Engine.start("Prime");
             default -> System.exit(0);
         }
 
-        if (game != null) {
-            Engine.start(game);
-        }
     }
 }

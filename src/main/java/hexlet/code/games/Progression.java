@@ -1,14 +1,12 @@
 package hexlet.code.games;
 
-public class Progression extends Game {
+public class Progression {
 
-    @Override
-    public final String getDescription() {
+    public static String getDescription() {
         return "What number is missing in the progression?";
     }
 
-    @Override
-    public final String getQuestion() {
+    public static String getQuestion() {
         final int maxStartNumber = 50;
         final int maxDifference = 20;
         final int maxLength = 14;
@@ -35,8 +33,7 @@ public class Progression extends Game {
         return new String().join(" ", question);
     }
 
-    @Override
-    public final String getCorrectAnswer(String question) {
+    public static String getCorrectAnswer(String question) {
         String[] progression = question.split(" ");
         int indexOfHiddenElement = 0;
 

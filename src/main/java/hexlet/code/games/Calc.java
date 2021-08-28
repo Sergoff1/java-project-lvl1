@@ -1,14 +1,12 @@
 package hexlet.code.games;
 
-public class Calc extends Game {
+public class Calc {
 
-    @Override
-    public final String getDescription() {
+    public static String getDescription() {
         return "What is the result of the expression?";
     }
 
-    @Override
-    public final String getQuestion() {
+    public static String getQuestion() {
         final int maxNumber = 51;
         char[] operations = {'+', '-', '*'};
 
@@ -19,8 +17,7 @@ public class Calc extends Game {
         return num1 + " " + operation + " " + num2;
     }
 
-    @Override
-    public final String getCorrectAnswer(String question) {
+    public static String getCorrectAnswer(String question) {
         String[] expressionElements = question.split(" ");
         int num1 = Integer.parseInt(expressionElements[0]);
         int num2 = Integer.parseInt(expressionElements[2]);

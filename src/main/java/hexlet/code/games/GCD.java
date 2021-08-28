@@ -1,22 +1,19 @@
 package hexlet.code.games;
 
-public class GCD extends Game {
+public class GCD {
 
-    @Override
-    public final String getDescription() {
+    public static String getDescription() {
         return "Find the greatest common divisor of given numbers.";
     }
 
-    @Override
-    public final String getQuestion() {
+    public static String getQuestion() {
         final int maxNumberInGame = 100;
         int number1 = (int) (Math.random() * maxNumberInGame) + 1;
         int number2 = (int) (Math.random() * maxNumberInGame) + 1;
         return number1 + " " + number2;
     }
 
-    @Override
-    public final String getCorrectAnswer(String question) {
+    public static String getCorrectAnswer(String question) {
         String[] numbers = question.split(" ");
         int biggerNum = Integer.parseInt(numbers[0]);
         int smallerNum = Integer.parseInt(numbers[1]);
