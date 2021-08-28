@@ -14,10 +14,6 @@ public class Engine {
     static void start(String game) {
         String playerName = Cli.greet();
 
-        if (game.equals("Greet")) {
-            return;
-        }
-
         switch (game) {
             case "Even":
                 System.out.println(Even.getDescription());
@@ -35,7 +31,7 @@ public class Engine {
                 System.out.println(Prime.getDescription());
                 break;
             default:
-                break;
+                return;
         }
 
         Scanner sc = new Scanner(System.in);
