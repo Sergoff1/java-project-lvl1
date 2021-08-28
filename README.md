@@ -14,3 +14,6 @@
 
 ### Пример игры Progression
 [![asciicast](https://asciinema.org/a/mvkn8K6od19J28x9Hv39h7Rg9.svg)](https://asciinema.org/a/mvkn8K6od19J28x9Hv39h7Rg9)
+
+### Пример игры Prime
+[![asciicast](https://asciinema.org/a/JG1MzPiwRQdXqOAZgTLGVAkVC.svg)](https://asciinema.org/a/JG1MzPiwRQdXqOAZgTLGVAkVC)

@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
-        String[] gamesNumbers = {"Exit", "Greet", "Even", "Calc", "GCD", "Progression"};
+        String[] gamesNumbers = {"Exit", "Greet", "Even", "Calc", "GCD", "Progression", "Prime"};
         for (int i = 1; i < gamesNumbers.length; i++) {
             System.out.println(i + " - " + gamesNumbers[i]);
         }
@@ -27,6 +27,7 @@ public class App {
             case 3 -> game = new Calc();
             case 4 -> game = new GCD();
             case 5 -> game = new Progression();
+            case 6 -> game = new Prime();
             default -> System.exit(0);
         }
 
