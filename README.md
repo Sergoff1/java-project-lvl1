@@ -11,3 +11,6 @@
 
 ### Пример игры GCD
 [![asciicast](https://asciinema.org/a/UYKMOtducRluV3UsG3QojXLxO.svg)](https://asciinema.org/a/UYKMOtducRluV3UsG3QojXLxO)
+
+### Пример игры Progression
+[![asciicast](https://asciinema.org/a/mvkn8K6od19J28x9Hv39h7Rg9.svg)](https://asciinema.org/a/mvkn8K6od19J28x9Hv39h7Rg9)
