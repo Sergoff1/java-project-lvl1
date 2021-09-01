@@ -2,6 +2,8 @@ package hexlet.code.games;
 
 public class Progression {
 
+    public static final String NAME = "Progression";
+
     public static String getDescription() {
         return "What number is missing in the progression?";
     }

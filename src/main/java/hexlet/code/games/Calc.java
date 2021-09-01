@@ -2,6 +2,8 @@ package hexlet.code.games;
 
 public class Calc {
 
+    public static final String NAME = "Calc";
+
     public static String getDescription() {
         return "What is the result of the expression?";
     }

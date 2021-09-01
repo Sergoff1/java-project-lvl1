@@ -15,19 +15,19 @@ public class Engine {
         String playerName = Cli.greet();
 
         switch (game) {
-            case "Even":
+            case Even.NAME:
                 System.out.println(Even.getDescription());
                 break;
-            case "Calc":
+            case Calc.NAME:
                 System.out.println(Calc.getDescription());
                 break;
-            case "GCD":
+            case GCD.NAME:
                 System.out.println(GCD.getDescription());
                 break;
-            case "Progression":
+            case Progression.NAME:
                 System.out.println(Progression.getDescription());
                 break;
-            case "Prime":
+            case Prime.NAME:
                 System.out.println(Prime.getDescription());
                 break;
             default:
