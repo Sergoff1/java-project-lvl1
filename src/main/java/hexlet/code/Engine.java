@@ -38,15 +38,15 @@ public class Engine {
 
         String[][] questionsAndAnswers = getQuestionsAndAnswers(game);
         for (int i = 0; i < ROUNDS_NUMBER; i++) {
-            System.out.println("Question: " + questionsAndAnswers[0][i]);
+            System.out.println("Question: " + questionsAndAnswers[i][0]);
             System.out.print("Your answer: ");
             String answer = sc.next();
 
-            if (questionsAndAnswers[1][i].equals(answer)) {
+            if (questionsAndAnswers[i][1].equals(answer)) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + questionsAndAnswers[1][i] + "'.");
+                        + questionsAndAnswers[i][1] + "'.");
                 System.out.println("Let's try again, " + playerName + "!");
                 return;
             }
