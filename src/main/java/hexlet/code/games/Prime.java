@@ -6,20 +6,22 @@ public class Prime {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
-    public static String getQuestion() {
+    public static String[] getQuestionAndAnswer() {
         final int maxNumberInGame = 504;
         int number = (int) (Math.random() * maxNumberInGame);
-        return Integer.toString(number);
-    }
 
-    public static String getCorrectAnswer(String question) {
-        int number = Integer.parseInt(question);
+        String[] questionAndAnswer = new String[2];
+
+        questionAndAnswer[0] = Integer.toString(number);
+        questionAndAnswer[1] = "yes";
 
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
-                return "no";
+                questionAndAnswer[1] = "no";
+                break;
             }
         }
-        return "yes";
+
+        return questionAndAnswer;
     }
 }

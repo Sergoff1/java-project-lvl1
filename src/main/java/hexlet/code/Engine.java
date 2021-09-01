@@ -56,29 +56,24 @@ public class Engine {
     }
 
     public static String[][] getQuestionsAndAnswers(String game) {
-        String[][] questionAndAnswers = new String[Engine.ROUNDS_NUMBER][Engine.ROUNDS_NUMBER];
+        String[][] questionAndAnswers = new String[Engine.ROUNDS_NUMBER][0];
 
         for (int i = 0; i < Engine.ROUNDS_NUMBER; i++) {
             switch (game) {
-                case "Even":
-                    questionAndAnswers[0][i] = Even.getQuestion();
-                    questionAndAnswers[1][i] = Even.getCorrectAnswer(questionAndAnswers[0][i]);
+                case Even.NAME:
+                    questionAndAnswers[i] = Even.getQuestionAndAnswer();
                     break;
-                case "Calc":
-                    questionAndAnswers[0][i] = Calc.getQuestion();
-                    questionAndAnswers[1][i] = Calc.getCorrectAnswer(questionAndAnswers[0][i]);
+                case Calc.NAME:
+                    questionAndAnswers[i] = Calc.getQuestionAndAnswer();
                     break;
-                case "GCD":
-                    questionAndAnswers[0][i] = GCD.getQuestion();
-                    questionAndAnswers[1][i] = GCD.getCorrectAnswer(questionAndAnswers[0][i]);
+                case GCD.NAME:
+                    questionAndAnswers[i] = GCD.getQuestionAndAnswer();
                     break;
-                case "Progression":
-                    questionAndAnswers[0][i] = Progression.getQuestion();
-                    questionAndAnswers[1][i] = Progression.getCorrectAnswer(questionAndAnswers[0][i]);
+                case Progression.NAME:
+                    questionAndAnswers[i] = Progression.getQuestionAndAnswer();
                     break;
-                case "Prime":
-                    questionAndAnswers[0][i] = Prime.getQuestion();
-                    questionAndAnswers[1][i] = Prime.getCorrectAnswer(questionAndAnswers[0][i]);
+                case Prime.NAME:
+                    questionAndAnswers[i] = Prime.getQuestionAndAnswer();
                     break;
                 default:
                     break;

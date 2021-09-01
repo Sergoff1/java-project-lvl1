@@ -6,7 +6,7 @@ public class Progression {
         return "What number is missing in the progression?";
     }
 
-    public static String getQuestion() {
+    public static String[] getQuestionAndAnswer() {
         final int maxStartNumber = 50;
         final int maxDifference = 20;
         final int maxLength = 14;
@@ -28,34 +28,12 @@ public class Progression {
 
         int indexOfHiddenElement = (int) (Math.random() * length);
 
+        String[] questionAndAnswer = new String[2];
+
+        questionAndAnswer[1] = question[indexOfHiddenElement];
         question[indexOfHiddenElement] = "..";
+        questionAndAnswer[0] = new String().join(" ", question);
 
-        return new String().join(" ", question);
-    }
-
-    public static String getCorrectAnswer(String question) {
-        String[] progression = question.split(" ");
-        int indexOfHiddenElement = 0;
-
-        for (int i = 0; i < progression.length; i++) {
-            if (progression[i].equals("..")) {
-                indexOfHiddenElement = i;
-                break;
-            }
-        }
-
-        int difference = 0;
-        if (indexOfHiddenElement > 1) {
-            difference = Integer.parseInt(progression[1]) - Integer.parseInt(progression[0]);
-        } else {
-            difference = Integer.parseInt(progression[progression.length - 1])
-                    - Integer.parseInt(progression[progression.length - 2]);
-        }
-
-        if (indexOfHiddenElement != 0) {
-            return "" + (Integer.parseInt(progression[indexOfHiddenElement - 1]) + difference);
-        } else {
-            return "" + (Integer.parseInt(progression[indexOfHiddenElement + 1]) - difference);
-        }
+        return questionAndAnswer;
     }
 }

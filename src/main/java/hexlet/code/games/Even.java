@@ -6,17 +6,15 @@ public class Even {
         return "Answer 'yes' if number even otherwise answer 'no'.";
     }
 
-    public static String getQuestion() {
+    public static String[] getQuestionAndAnswer() {
         final int maxNumberInGame = 100;
         int number = (int) (Math.random() * maxNumberInGame);
-        return Integer.toString(number);
-    }
 
-    public static String getCorrectAnswer(String question) {
-        if (Integer.parseInt(question) % 2 == 0) {
-            return "yes";
-        } else {
-            return "no";
-        }
+        String[] questionAndAnswer = new String[2];
+
+        questionAndAnswer[0] = Integer.toString(number);
+        questionAndAnswer[1] = number % 2 == 0 ? "yes" : "no";
+
+        return questionAndAnswer;
     }
 }

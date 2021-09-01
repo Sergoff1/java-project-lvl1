@@ -6,7 +6,7 @@ public class Calc {
         return "What is the result of the expression?";
     }
 
-    public static String getQuestion() {
+    public static String[] getQuestionAndAnswer() {
         final int maxNumber = 51;
         char[] operations = {'+', '-', '*'};
 
@@ -14,19 +14,18 @@ public class Calc {
         int num2 = (int) (Math.random() * maxNumber);
         char operation = operations[(int) (Math.random() * operations.length)];
 
-        return num1 + " " + operation + " " + num2;
-    }
+        String[] questionAndAnswer = new String[2];
 
-    public static String getCorrectAnswer(String question) {
-        String[] expressionElements = question.split(" ");
-        int num1 = Integer.parseInt(expressionElements[0]);
-        int num2 = Integer.parseInt(expressionElements[2]);
-
-        return switch (expressionElements[1]) {
-            case "-" -> Integer.toString(num1 - num2);
-            case "+" -> Integer.toString(num1 + num2);
-            case "*" -> Integer.toString(num1 * num2);
+        String answer = switch (operation) {
+            case '-' -> Integer.toString(num1 - num2);
+            case '+' -> Integer.toString(num1 + num2);
+            case '*' -> Integer.toString(num1 * num2);
             default -> "0";
         };
+
+        questionAndAnswer[0] = num1 + " " + operation + " " + num2;
+        questionAndAnswer[1] = answer;
+
+        return questionAndAnswer;
     }
 }
