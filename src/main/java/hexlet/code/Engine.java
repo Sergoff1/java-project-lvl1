@@ -1,42 +1,17 @@
 package hexlet.code;
 
-import hexlet.code.games.Even;
-import hexlet.code.games.Calc;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
-
 import java.util.Scanner;
 
 public class Engine {
     public static final int ROUNDS_NUMBER = 3;
 
-    static void start(String game) {
+    static void start(String[][] questionsAndAnswers, String gameDescription) {
         String playerName = Cli.greet();
 
-        switch (game) {
-            case Even.NAME:
-                System.out.println(Even.getDescription());
-                break;
-            case Calc.NAME:
-                System.out.println(Calc.getDescription());
-                break;
-            case GCD.NAME:
-                System.out.println(GCD.getDescription());
-                break;
-            case Progression.NAME:
-                System.out.println(Progression.getDescription());
-                break;
-            case Prime.NAME:
-                System.out.println(Prime.getDescription());
-                break;
-            default:
-                return;
-        }
+        System.out.println(gameDescription);
 
         Scanner sc = new Scanner(System.in);
 
-        String[][] questionsAndAnswers = getQuestionsAndAnswers(game);
         for (int i = 0; i < ROUNDS_NUMBER; i++) {
             System.out.println("Question: " + questionsAndAnswers[i][0]);
             System.out.print("Your answer: ");
@@ -54,33 +29,4 @@ public class Engine {
 
         System.out.println("Congratulations, " + playerName + "!");
     }
-
-    public static String[][] getQuestionsAndAnswers(String game) {
-        String[][] questionAndAnswers = new String[Engine.ROUNDS_NUMBER][0];
-
-        for (int i = 0; i < Engine.ROUNDS_NUMBER; i++) {
-            switch (game) {
-                case Even.NAME:
-                    questionAndAnswers[i] = Even.getQuestionAndAnswer();
-                    break;
-                case Calc.NAME:
-                    questionAndAnswers[i] = Calc.getQuestionAndAnswer();
-                    break;
-                case GCD.NAME:
-                    questionAndAnswers[i] = GCD.getQuestionAndAnswer();
-                    break;
-                case Progression.NAME:
-                    questionAndAnswers[i] = Progression.getQuestionAndAnswer();
-                    break;
-                case Prime.NAME:
-                    questionAndAnswers[i] = Prime.getQuestionAndAnswer();
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        return questionAndAnswers;
-    }
-
 }
