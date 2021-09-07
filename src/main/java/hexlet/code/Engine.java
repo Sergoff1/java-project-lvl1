@@ -29,4 +29,8 @@ public class Engine {
 
         System.out.println("Congratulations, " + playerName + "!");
     }
+
+    public static int getRandomNumberUpTo(int number) {
+        return (int) (Math.random() * number);
+    }
 }
