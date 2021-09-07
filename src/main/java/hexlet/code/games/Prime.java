@@ -15,15 +15,17 @@ public class Prime {
         String[] questionAndAnswer = new String[2];
 
         questionAndAnswer[0] = Integer.toString(number);
-        questionAndAnswer[1] = "yes";
-
-        for (int i = 2; i < number; i++) {
-            if (number % i == 0) {
-                questionAndAnswer[1] = "no";
-                break;
-            }
-        }
+        questionAndAnswer[1] = isPrime(number) ? "yes" : "no";
 
         return questionAndAnswer;
+    }
+
+    public static boolean isPrime(int number) {
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
