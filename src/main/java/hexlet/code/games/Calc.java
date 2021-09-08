@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Calc {
 
     public static final String NAME = "Calc";
@@ -12,9 +14,9 @@ public class Calc {
         final int maxNumber = 51;
         char[] operations = {'+', '-', '*'};
 
-        int num1 = (int) (Math.random() * maxNumber);
-        int num2 = (int) (Math.random() * maxNumber);
-        char operation = operations[(int) (Math.random() * operations.length)];
+        int num1 = Utils.getRandomNumberUpTo(maxNumber);
+        int num2 = Utils.getRandomNumberUpTo(maxNumber);
+        char operation = operations[Utils.getRandomNumberUpTo(operations.length)];
 
         String[] questionAndAnswer = new String[2];
 

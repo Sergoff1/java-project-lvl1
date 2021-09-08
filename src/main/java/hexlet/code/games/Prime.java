@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Prime {
 
     public static final String NAME = "Prime";
@@ -10,7 +12,7 @@ public class Prime {
 
     public static String[] getQuestionAndAnswer() {
         final int maxNumberInGame = 504;
-        int number = (int) (Math.random() * maxNumberInGame);
+        int number = Utils.getRandomNumberUpTo(maxNumberInGame);
 
         String[] questionAndAnswer = new String[2];
 

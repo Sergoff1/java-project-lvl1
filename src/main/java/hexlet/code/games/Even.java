@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Even {
 
     public static final String NAME = "Even";
@@ -10,7 +12,7 @@ public class Even {
 
     public static String[] getQuestionAndAnswer() {
         final int maxNumberInGame = 100;
-        int number = (int) (Math.random() * maxNumberInGame);
+        int number = Utils.getRandomNumberUpTo(maxNumberInGame);
 
         String[] questionAndAnswer = new String[2];
 

@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Progression {
 
     public static final String NAME = "Progression";
@@ -14,9 +16,9 @@ public class Progression {
         final int maxLength = 14;
         final int minLength = 5;
 
-        int startNumber = (int) (Math.random() * maxStartNumber);
-        int difference = (int) (Math.random() * maxDifference);
-        int length = minLength + (int) (Math.random() * (maxLength - minLength));
+        int startNumber = Utils.getRandomNumberUpTo(maxStartNumber);
+        int difference = Utils.getRandomNumberUpTo(maxDifference);
+        int length = minLength + Utils.getRandomNumberUpTo((maxLength - minLength));
 
         String[] question = new String[length];
 
@@ -28,7 +30,7 @@ public class Progression {
             question[i] = Integer.toString(currentNumber);
         }
 
-        int indexOfHiddenElement = (int) (Math.random() * length);
+        int indexOfHiddenElement = Utils.getRandomNumberUpTo(length);
 
         String[] questionAndAnswer = new String[2];
 

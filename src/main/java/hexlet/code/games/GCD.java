@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class GCD {
 
     public static final String NAME = "GCD";
@@ -10,8 +12,8 @@ public class GCD {
 
     public static String[] getQuestionAndAnswer() {
         final int maxNumberInGame = 100;
-        int number1 = (int) (Math.random() * maxNumberInGame) + 1;
-        int number2 = (int) (Math.random() * maxNumberInGame) + 1;
+        int number1 = Utils.getRandomNumberUpTo(maxNumberInGame) + 1;
+        int number2 = Utils.getRandomNumberUpTo(maxNumberInGame) + 1;
 
         String[] questionAndAnswer = new String[2];
 
