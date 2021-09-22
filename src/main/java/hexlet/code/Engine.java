@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Engine {
     public static final int ROUNDS_NUMBER = 3;
 
-    static void start(String[][] questionsAndAnswers, String gameDescription) {
+    public static void start(String[][] questionsAndAnswers, String gameDescription) {
         String playerName = Cli.greet();
 
         System.out.println(gameDescription);

@@ -1,14 +1,12 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
 
     public static final String NAME = "Calc";
-
-    public static String getDescription() {
-        return "What is the result of the expression?";
-    }
+    static final String DESCRIPTION = "What is the result of the expression?";
 
     public static String[] getQuestionAndAnswer() {
         final int maxNumber = 51;
@@ -31,5 +29,13 @@ public class Calc {
         questionAndAnswer[1] = answer;
 
         return questionAndAnswer;
+    }
+
+    public static void start() {
+        String[][] questionAndAnswers = new String[Engine.ROUNDS_NUMBER][0];
+        for (int i = 0; i < Engine.ROUNDS_NUMBER; i++) {
+            questionAndAnswers[i] = Calc.getQuestionAndAnswer();
+        }
+        Engine.start(questionAndAnswers, DESCRIPTION);
     }
 }

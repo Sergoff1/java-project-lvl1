@@ -1,14 +1,12 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
 
     public static final String NAME = "Progression";
-
-    public static String getDescription() {
-        return "What number is missing in the progression?";
-    }
+    static final String DESCRIPTION = "What number is missing in the progression?";
 
     public static String[] getQuestionAndAnswer() {
         final int maxStartNumber = 50;
@@ -36,5 +34,13 @@ public class Progression {
         questionAndAnswer[0] = "".join(" ", question);
 
         return questionAndAnswer;
+    }
+
+    public static void start() {
+        String[][] questionAndAnswers = new String[Engine.ROUNDS_NUMBER][0];
+        for (int i = 0; i < Engine.ROUNDS_NUMBER; i++) {
+            questionAndAnswers[i] = Progression.getQuestionAndAnswer();
+        }
+        Engine.start(questionAndAnswers, DESCRIPTION);
     }
 }

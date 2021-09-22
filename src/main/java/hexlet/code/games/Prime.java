@@ -1,14 +1,12 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
 
     public static final String NAME = "Prime";
-
-    public static String getDescription() {
-        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    }
+    static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static String[] getQuestionAndAnswer() {
         final int maxNumberInGame = 504;
@@ -29,5 +27,13 @@ public class Prime {
             }
         }
         return true;
+    }
+
+    public static void start() {
+        String[][] questionAndAnswers = new String[Engine.ROUNDS_NUMBER][0];
+        for (int i = 0; i < Engine.ROUNDS_NUMBER; i++) {
+            questionAndAnswers[i] = Prime.getQuestionAndAnswer();
+        }
+        Engine.start(questionAndAnswers, DESCRIPTION);
     }
 }

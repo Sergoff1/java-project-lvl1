@@ -21,38 +21,26 @@ public class App {
         System.out.print("Your choice: ");
         int selectedGame = sc.nextInt();
 
-        String gameDescription = "";
-        String[][] questionAndAnswers = new String[Engine.ROUNDS_NUMBER][0];
-
-        for (int i = 0; i < Engine.ROUNDS_NUMBER; i++) {
-            switch (gamesNumbers[selectedGame]) {
-                case Even.NAME:
-                    questionAndAnswers[i] = Even.getQuestionAndAnswer();
-                    gameDescription = Even.getDescription();
-                    break;
-                case Calc.NAME:
-                    questionAndAnswers[i] = Calc.getQuestionAndAnswer();
-                    gameDescription = Calc.getDescription();
-                    break;
-                case GCD.NAME:
-                    questionAndAnswers[i] = GCD.getQuestionAndAnswer();
-                    gameDescription = GCD.getDescription();
-                    break;
-                case Progression.NAME:
-                    questionAndAnswers[i] = Progression.getQuestionAndAnswer();
-                    gameDescription = Progression.getDescription();
-                    break;
-                case Prime.NAME:
-                    questionAndAnswers[i] = Prime.getQuestionAndAnswer();
-                    gameDescription = Prime.getDescription();
-                    break;
-                case "Greet":
-                    Cli.greet();
-                default:
-                    System.exit(0);
-            }
+        switch (gamesNumbers[selectedGame]) {
+            case Even.NAME:
+                Even.start();
+                break;
+            case Calc.NAME:
+                Calc.start();
+                break;
+            case GCD.NAME:
+                GCD.start();
+                break;
+            case Progression.NAME:
+                Progression.start();
+                break;
+            case Prime.NAME:
+                Prime.start();
+                break;
+            case "Greet":
+                Cli.greet();
+            default:
+                System.exit(0);
         }
-
-        Engine.start(questionAndAnswers, gameDescription);
     }
 }
