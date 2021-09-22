@@ -12,21 +12,18 @@ public class Progression {
 
     public static String[] getQuestionAndAnswer() {
         final int maxStartNumber = 50;
-        final int maxDifference = 20;
+        final int maxStep = 20;
         final int maxLength = 14;
         final int minLength = 5;
 
         int startNumber = Utils.getRandomNumberUpTo(maxStartNumber);
-        int difference = Utils.getRandomNumberUpTo(maxDifference);
+        int step = Utils.getRandomNumberUpTo(maxStep);
         int length = minLength + Utils.getRandomNumberUpTo((maxLength - minLength));
 
         String[] question = new String[length];
 
-        question[0] = Integer.toString(startNumber);
-
-        int currentNumber = startNumber;
-        for (int i = 1; i < length; i++) {
-            currentNumber += difference;
+        for (int i = 0; i < length; i++) {
+            int currentNumber = startNumber + step * i;
             question[i] = Integer.toString(currentNumber);
         }
 
@@ -36,7 +33,7 @@ public class Progression {
 
         questionAndAnswer[1] = question[indexOfHiddenElement];
         question[indexOfHiddenElement] = "..";
-        questionAndAnswer[0] = new String().join(" ", question);
+        questionAndAnswer[0] = "".join(" ", question);
 
         return questionAndAnswer;
     }
