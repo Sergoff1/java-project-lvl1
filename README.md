@@ -3,6 +3,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/dc88a98a32ed063b74a4/maintainability)](https://codeclimate.com/github/Sergoff1/java-project-lvl1/maintainability)
 ![Java CI](https://github.com/Sergoff1/java-project-lvl1/workflows/Java%20CI/badge.svg)
 
+### Команда для запуска игры с помощью Докера
+    sudo docker run -it sergoff/brain-games-docker
+
 ### Пример игры Even
 [![asciicast](https://asciinema.org/a/QzIhjQtiXSABccPLunf8pafe2.svg)](https://asciinema.org/a/QzIhjQtiXSABccPLunf8pafe2)
 
